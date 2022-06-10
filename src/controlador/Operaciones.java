@@ -45,6 +45,9 @@ public class Operaciones {
     public static void ejecutarOperador(String operador) {
         if (caja.getText().isEmpty()) return;
         if (divisionError) return;
+        if (signoActivo) {
+            mostrarResultado();
+        }
         anterior = Integer.parseInt(caja.getText());
         caja.setText(operador);
         signo = operador;
